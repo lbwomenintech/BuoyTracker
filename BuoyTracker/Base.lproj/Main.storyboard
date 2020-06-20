@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fkl-FN-aX3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Buoy Stations-->
+        <scene sceneID="XPB-ps-1K0">
+            <objects>
+                <navigationController id="1be-C7-EfM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Buoy Stations" id="SC5-5x-2JY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yli-CZ-AxO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qin-LK-YcP" kind="relationship" relationship="rootViewController" id="3yu-Fg-6qf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvT-Hk-YV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="-528"/>
+        </scene>
+        <!--Buoy Table View Controller-->
+        <scene sceneID="KL3-hM-Ynx">
+            <objects>
+                <tableViewController id="Qin-LK-YcP" customClass="BuoyTableViewController" customModule="BuoyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VqS-Oe-lIF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Qin-LK-YcP" id="eDz-Gc-nij"/>
+                            <outlet property="delegate" destination="Qin-LK-YcP" id="jEy-qe-AMq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5PO-G5-1vc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYP-cl-HBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-528"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9QO-Y3-HZV">
+            <objects>
+                <tabBarController id="fkl-FN-aX3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1oc-eC-bbd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1be-C7-EfM" kind="relationship" relationship="viewControllers" id="SLN-KD-BYK"/>
+                        <segue destination="Fwu-Vn-nF4" kind="relationship" relationship="viewControllers" id="30x-h6-coK"/>
+                        <segue destination="FWK-Ei-WgU" kind="relationship" relationship="viewControllers" id="UhZ-Bg-IOD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ien-g8-T1C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="-197"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="1jX-uY-wpa">
+            <objects>
+                <navigationController id="Fwu-Vn-nF4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="rKp-gx-G1e"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xbL-r9-6HG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="T22-jC-4iE" kind="relationship" relationship="rootViewController" id="44p-ie-3Za"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a4-uX-yzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="157"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="hu9-p3-r2M">
+            <objects>
+                <navigationController id="FWK-Ei-WgU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="oul-Il-LoV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xuk-EQ-yUy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5GT-J7-Irt" kind="relationship" relationship="rootViewController" id="wxB-nc-vEB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l3M-5l-g7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1271" y="838"/>
+        </scene>
+        <!--Buoy Map View Controller-->
+        <scene sceneID="kS9-TH-zbS">
+            <objects>
+                <viewController id="5GT-J7-Irt" customClass="BuoyMapViewController" customModule="BuoyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hN8-wB-gyL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BwY-L7-M9H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BwY-L7-M9H" firstAttribute="leading" secondItem="Tu5-xY-pd8" secondAttribute="leading" id="9SU-LY-EZI"/>
+                            <constraint firstItem="Tu5-xY-pd8" firstAttribute="bottom" secondItem="BwY-L7-M9H" secondAttribute="bottom" id="Lmm-Dj-6dN"/>
+                            <constraint firstItem="Tu5-xY-pd8" firstAttribute="trailing" secondItem="BwY-L7-M9H" secondAttribute="trailing" id="Mt2-PD-qAB"/>
+                            <constraint firstItem="BwY-L7-M9H" firstAttribute="top" secondItem="Tu5-xY-pd8" secondAttribute="top" id="TIN-xF-bo4"/>
+                            <constraint firstItem="BwY-L7-M9H" firstAttribute="leading" secondItem="Tu5-xY-pd8" secondAttribute="leading" id="abY-6O-w24"/>
+                            <constraint firstItem="Tu5-xY-pd8" firstAttribute="trailing" secondItem="BwY-L7-M9H" secondAttribute="trailing" id="fTu-LY-bFR"/>
+                            <constraint firstItem="BwY-L7-M9H" firstAttribute="top" secondItem="Tu5-xY-pd8" secondAttribute="top" id="hC2-ln-v2Y"/>
+                            <constraint firstItem="Tu5-xY-pd8" firstAttribute="bottom" secondItem="BwY-L7-M9H" secondAttribute="bottom" id="po0-WS-Y0I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tu5-xY-pd8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gVJ-P1-sME"/>
+                    <connections>
+                        <outlet property="mapView" destination="BwY-L7-M9H" id="Tyh-Ov-3RL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdp-tT-E8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="838"/>
+        </scene>
+        <!--Favorites Table View Controller-->
+        <scene sceneID="e5V-ld-tzs">
+            <objects>
+                <tableViewController id="T22-jC-4iE" customClass="FavoritesTableViewController" customModule="BuoyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wRO-Ic-djE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="T22-jC-4iE" id="6JL-sk-3nf"/>
+                            <outlet property="delegate" destination="T22-jC-4iE" id="Qqw-ic-OzC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="TrC-Ox-GxR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kk2-IF-Mnj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="157"/>
+        </scene>
+        <!--Buoy Detail View Controller-->
+        <scene sceneID="ac6-Lm-9rj">
+            <objects>
+                <viewController storyboardIdentifier="BuoyDetailViewController" id="KLh-DO-jr5" customClass="BuoyDetailViewController" customModule="BuoyTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1KB-yh-Gwo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndy-5n-W1g">
+                                <rect key="frame" x="16" y="60" width="382" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rKQ-Tc-Xi8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pHA-sK-HZX">
+                                <rect key="frame" x="16" y="136" width="382" height="642"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dah-i3-fj7">
+                                <rect key="frame" x="16" y="802" width="382" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IRv-Hm-nMU"/>
+                                </constraints>
+                                <state key="normal" title="ADD FAVORITE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoriteButtonPressed" destination="KLh-DO-jr5" eventType="touchUpInside" id="W0Q-Ag-rLF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lr9-2E-58s" firstAttribute="trailing" secondItem="Ndy-5n-W1g" secondAttribute="trailing" constant="16" id="6Xo-LA-PGI"/>
+                            <constraint firstItem="Dah-i3-fj7" firstAttribute="leading" secondItem="Lr9-2E-58s" secondAttribute="leading" constant="16" id="D95-km-xUp"/>
+                            <constraint firstItem="Lr9-2E-58s" firstAttribute="trailing" secondItem="pHA-sK-HZX" secondAttribute="trailing" constant="16" id="G0Z-OW-NAp"/>
+                            <constraint firstItem="pHA-sK-HZX" firstAttribute="leading" secondItem="Lr9-2E-58s" secondAttribute="leading" constant="16" id="K0u-DZ-R18"/>
+                            <constraint firstItem="Ndy-5n-W1g" firstAttribute="leading" secondItem="Lr9-2E-58s" secondAttribute="leading" constant="16" id="Ogr-B3-OFw"/>
+                            <constraint firstItem="Ndy-5n-W1g" firstAttribute="top" secondItem="Lr9-2E-58s" secondAttribute="top" constant="16" id="Zbs-8p-IWt"/>
+                            <constraint firstItem="pHA-sK-HZX" firstAttribute="top" secondItem="Ndy-5n-W1g" secondAttribute="bottom" constant="16" id="d1Y-1t-M9P"/>
+                            <constraint firstItem="Lr9-2E-58s" firstAttribute="trailing" secondItem="Dah-i3-fj7" secondAttribute="trailing" constant="16" id="gay-Zd-BlL"/>
+                            <constraint firstItem="Lr9-2E-58s" firstAttribute="bottom" secondItem="Dah-i3-fj7" secondAttribute="bottom" constant="16" id="gdg-59-Pqy"/>
+                            <constraint firstItem="Dah-i3-fj7" firstAttribute="top" secondItem="pHA-sK-HZX" secondAttribute="bottom" constant="24" id="rVJ-Rf-Q4U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lr9-2E-58s"/>
+                    </view>
+                    <connections>
+                        <outlet property="buoyDescriptionTextView" destination="pHA-sK-HZX" id="xml-Y4-OEy"/>
+                        <outlet property="buoyNameLabel" destination="Ndy-5n-W1g" id="FxK-f9-FeY"/>
+                        <outlet property="favoriteButton" destination="Dah-i3-fj7" id="akQ-aT-6zl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNH-xP-Vtu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="157"/>
+        </scene>
+    </scenes>
+</document>
